@@ -125,7 +125,7 @@ const config: Config = {
           },
         ]
       : []),
-    // Google Fonts: Inter (UI/Body), JetBrains Mono (Code)
+    // Editorial reading typography + modern UI and code faces
     {
       tagName: "link",
       attributes: {
@@ -145,7 +145,7 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap",
       },
     },
   ],

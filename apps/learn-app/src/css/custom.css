@@ -82,6 +82,7 @@
     /* Font Definitions */
     --font-sans: 'Manrope', sans-serif;
     --font-mono: 'DM Mono', monospace;
+    --font-reading: 'Newsreader', Georgia, serif;
 
     /* Shadcn OKLCH Variables */
     --background: oklch(0.985 0.008 105);
@@ -398,4 +399,22 @@ ul.tabs[role="tablist"] {
 
 [data-theme='dark'] .navbar-factory-link:hover {
     color: oklch(0.85 0.18 77) !important; /* Brighter amber in dark mode */
+}
+
+.fynsera-logo {
+    color: var(--primary);
+    filter: drop-shadow(0 7px 13px color-mix(in oklch, var(--primary) 22%, transparent));
+    transition: transform 180ms ease, filter 180ms ease;
+}
+
+.fynsera-wordmark:hover .fynsera-logo {
+    transform: rotate(-3deg) translateY(-1px);
+    filter: drop-shadow(0 10px 18px color-mix(in oklch, var(--primary) 32%, transparent));
+}
+
+.fynsera-wordmark > span {
+    font-family: var(--font-reading);
+    font-size: 1.35em;
+    font-weight: 600;
+    letter-spacing: -0.045em;
 }

@@ -10,6 +10,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/co
 import { Button } from "@/components/ui/button";
 import { Menu, BookOpen, Layers, Lightbulb, Github, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import FynseraLogo from '@/components/FynseraLogo';
 
 export default function Navbar() {
     const { siteConfig } = useDocusaurusContext();
@@ -43,10 +44,8 @@ export default function Navbar() {
 
                     {/* LEFT: Logo */}
                     <div className="flex items-center gap-2 shrink-0">
-                        <Link to="/" className="flex items-center gap-2 font-bold text-base sm:text-lg md:text-xl tracking-tight text-foreground hover:no-underline hover:text-primary transition-colors whitespace-nowrap">
-                            <div className="fynsera-logo-mark h-7 w-7 sm:h-8 sm:w-8 flex items-center justify-center text-primary-foreground text-xs sm:text-sm font-bold shrink-0">
-                                FY
-                            </div>
+                        <Link to="/" className="fynsera-wordmark flex items-center gap-2.5 font-bold text-base sm:text-lg md:text-xl tracking-tight text-foreground hover:no-underline hover:text-primary transition-colors whitespace-nowrap">
+                            <FynseraLogo className="fynsera-logo h-8 w-8 sm:h-9 sm:w-9 shrink-0" />
                             <span>Fynsera</span>
                         </Link>
                     </div>

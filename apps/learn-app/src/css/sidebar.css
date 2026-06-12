@@ -403,3 +403,56 @@ aside[class*='sidebar'] .menu__link--active {
   padding-top: 0.5rem !important;
   margin-top: 0.5rem !important;
 }
+
+/* Editorial chapter rail */
+@media (min-width: 997px) {
+  .theme-doc-sidebar-container {
+    background: linear-gradient(90deg, color-mix(in oklch, var(--primary) 4%, var(--background)), var(--background)) !important;
+    border-right: 1px solid color-mix(in oklch, var(--border) 76%, transparent) !important;
+  }
+
+  .theme-doc-sidebar-container::before {
+    content: "Fynsera field manual";
+    display: block;
+    margin: 1.4rem 1.1rem 0;
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+}
+
+.theme-doc-sidebar-menu {
+  counter-reset: fynsera-part;
+}
+
+.theme-doc-sidebar-menu > .menu__list-item {
+  counter-increment: fynsera-part;
+}
+
+.theme-doc-sidebar-menu > .menu__list-item > .menu__link--sublist::before,
+.theme-doc-sidebar-menu > .menu__list-item > .menu__list-item-collapsible .menu__link--sublist::before {
+  content: counter(fynsera-part, decimal-leading-zero) !important;
+  display: inline-flex !important;
+  min-width: 1.8rem;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  letter-spacing: .05em;
+}
+
+.menu__link {
+  border-radius: 9px !important;
+}
+
+.theme-doc-sidebar-container .menu__link--active {
+  position: relative;
+  background: color-mix(in oklch, var(--primary) 9%, transparent) !important;
+  box-shadow: inset 2px 0 var(--primary);
+}
+
+.theme-doc-sidebar-container .menu__link:hover {
+  background: color-mix(in oklch, var(--primary) 6%, transparent) !important;
+}

@@ -1,5 +1,6 @@
 import Link from "@docusaurus/Link";
 import { Button } from "@/components/ui/button";
+import FynseraLogo from "@/components/FynseraLogo";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ export default function Footer() {
                     <div className="md:col-span-5 flex flex-col justify-between h-full">
                         <div>
                             <div className="flex items-center gap-3 mb-5">
-                                <div className="fynsera-logo-mark h-10 w-10 flex items-center justify-center text-primary-foreground text-sm font-bold">FY</div>
+                                <FynseraLogo className="fynsera-logo h-10 w-10" />
                                 <h3 className="text-2xl font-extrabold tracking-tight">Fynsera</h3>
                             </div>
                             <p className="text-muted-foreground max-w-md leading-relaxed">The operating system for founders building AI-native companies with agentic workflows, financial control, and repeatable execution.</p>

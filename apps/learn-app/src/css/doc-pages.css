@@ -1620,3 +1620,212 @@ article {
     padding: 1.25rem;
   }
 }
+
+/* ============================================================================
+   FYNSERA EDITORIAL READER
+   A calm, tactile reading surface for the living company-building manual.
+   ============================================================================ */
+
+body:has(.theme-doc-markdown) {
+  background:
+    radial-gradient(circle at 72% 6%, color-mix(in oklch, var(--primary) 7%, transparent), transparent 26rem),
+    linear-gradient(90deg, color-mix(in oklch, var(--primary) 3%, var(--background)), var(--background) 28%, var(--background));
+}
+
+[class*='docItemCol'] {
+  padding: 2rem clamp(1.25rem, 4vw, 5rem) 5rem !important;
+}
+
+[class*='docItemContainer'] {
+  max-width: 900px !important;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 4.5rem) clamp(1.25rem, 5vw, 5.5rem) 4rem !important;
+  border: 1px solid color-mix(in oklch, var(--border) 72%, transparent);
+  border-radius: 3px 18px 18px 3px;
+  background:
+    linear-gradient(90deg, color-mix(in oklch, var(--foreground) 3%, transparent), transparent 1.5rem),
+    color-mix(in oklch, var(--card) 97%, var(--background));
+  box-shadow:
+    -12px 0 0 color-mix(in oklch, var(--primary) 20%, var(--card)),
+    0 28px 80px color-mix(in oklch, var(--foreground) 8%, transparent);
+}
+
+[class*='docItemContainer'] article,
+[class*='docItemContainer'] .theme-doc-markdown {
+  max-width: 720px !important;
+  margin-inline: auto;
+}
+
+.theme-doc-markdown {
+  color: color-mix(in oklch, var(--foreground) 91%, var(--muted-foreground));
+  font-family: var(--font-reading);
+  font-size: clamp(1.08rem, 1.3vw, 1.2rem);
+  line-height: 1.82;
+  letter-spacing: .002em;
+}
+
+.theme-doc-markdown > h1:first-child {
+  margin: .35rem 0 1.8rem;
+  font-family: var(--font-reading);
+  font-size: clamp(2.7rem, 5vw, 4.7rem);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+
+.theme-doc-markdown > h1:first-child::before {
+  content: "Fynsera / Field note";
+  display: block;
+  margin-bottom: 1.15rem;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  font-weight: 500;
+  letter-spacing: .17em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.theme-doc-markdown > h1:first-child::after {
+  width: 4.25rem;
+  height: 2px;
+  margin-top: 1.5rem;
+  background: var(--primary);
+}
+
+.theme-doc-markdown h2,
+.theme-doc-markdown h3,
+.theme-doc-markdown h4 {
+  font-family: var(--font-sans);
+  letter-spacing: -.035em;
+}
+
+.theme-doc-markdown h2 {
+  margin-top: 4.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid color-mix(in oklch, var(--border) 74%, transparent);
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 700;
+}
+
+.theme-doc-markdown h3 {
+  margin-top: 2.8rem;
+  font-size: 1.35rem;
+}
+
+.theme-doc-markdown p:first-of-type {
+  font-size: 1.18em;
+  line-height: 1.72;
+}
+
+.theme-doc-markdown p:first-of-type::first-letter {
+  float: left;
+  margin: .12em .13em 0 0;
+  color: var(--primary);
+  font-family: var(--font-reading);
+  font-size: 3.7em;
+  font-weight: 600;
+  line-height: .72;
+}
+
+.theme-doc-markdown strong,
+.theme-doc-markdown th {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.theme-doc-markdown blockquote {
+  margin: 2.5rem 0;
+  padding: 1.3rem 0 1.3rem 1.8rem;
+  border-left: 3px solid var(--primary);
+  color: color-mix(in oklch, var(--foreground) 78%, var(--primary));
+  background: transparent;
+  font-size: 1.15em;
+  font-style: italic;
+}
+
+.theme-doc-markdown pre,
+.theme-doc-markdown table,
+.theme-doc-markdown .admonition {
+  font-family: var(--font-sans);
+  border-radius: 13px !important;
+}
+
+.doc-content-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid color-mix(in oklch, var(--border) 72%, transparent);
+}
+
+.reading-time {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: .67rem;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.theme-doc-breadcrumbs {
+  margin-bottom: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .04em;
+}
+
+.theme-doc-toc-desktop {
+  padding-top: 2.6rem;
+}
+
+.table-of-contents {
+  border-left: 1px solid color-mix(in oklch, var(--border) 80%, transparent);
+}
+
+.table-of-contents::before {
+  content: "On this page";
+  display: block;
+  margin: 0 0 .9rem .8rem;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.table-of-contents__link {
+  font-size: .76rem;
+  line-height: 1.45;
+}
+
+.pagination-nav {
+  gap: .8rem;
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in oklch, var(--border) 72%, transparent);
+}
+
+.pagination-nav__link {
+  border-radius: 12px !important;
+  background: color-mix(in oklch, var(--primary) 5%, var(--card));
+}
+
+@media (max-width: 996px) {
+  [class*='docItemCol'] {
+    padding: 1rem .75rem 3rem !important;
+  }
+
+  [class*='docItemContainer'] {
+    padding: 1.5rem 1.15rem 3rem !important;
+    border-radius: 2px 12px 12px 2px;
+    box-shadow: -5px 0 0 color-mix(in oklch, var(--primary) 20%, var(--card));
+  }
+
+  .theme-doc-markdown {
+    font-size: 1.02rem;
+    line-height: 1.75;
+  }
+
+  .theme-doc-markdown > h1:first-child {
+    font-size: clamp(2.35rem, 12vw, 3.4rem);
+  }
+}
