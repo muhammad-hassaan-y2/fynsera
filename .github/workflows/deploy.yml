@@ -11,7 +11,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [staging]
+    branches: [main]
     paths:
       - "apps/learn-app/**"
       - "libs/docusaurus/**"
