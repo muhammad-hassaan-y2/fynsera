@@ -13,7 +13,8 @@ const AUTH_URL = process.env.AUTH_URL || "http://localhost:3001";
 // OAuth client ID - use the pre-configured trusted client (PKCE + JWKS)
 // This matches the trustedClients configuration in auth-server
 const OAUTH_CLIENT_ID = process.env.OAUTH_CLIENT_ID || "agent-factory-public-client";
-const SITE_URL = process.env.SITE_URL || "https://agentfactory.panaversity.org";
+const SITE_URL = process.env.SITE_URL || "https://muhammad-hassaan-y2.github.io";
+const BASE_URL = process.env.BASE_URL || "/fynsera/";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -45,7 +46,7 @@ const config: Config = {
   url: SITE_URL,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: BASE_URL,
 
   // Sitemap is configured via the classic preset's sitemap option below
 

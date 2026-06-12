@@ -64,8 +64,8 @@ jobs:
           PANAVERSITY_SERVER_URL: ${{ secrets.PANAVERSITY_SERVER_URL }}
           AUTH_URL: ${{ secrets.AUTH_URL }}
           OAUTH_CLIENT_ID: ${{ secrets.OAUTH_CLIENT_ID }}
-          SITE_URL: ${{ secrets.SITE_URL }}
-          BASE_URL: ${{ secrets.BASE_URL }}
+          SITE_URL: https://muhammad-hassaan-y2.github.io
+          BASE_URL: /fynsera/
           PANAVERSITY_API_KEY: ${{ secrets.PANAVERSITY_API_KEY }}
         run: pnpm build
 
