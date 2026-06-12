@@ -13,6 +13,7 @@ const AUTH_URL = process.env.AUTH_URL || "http://localhost:3001";
 // OAuth client ID - use the pre-configured trusted client (PKCE + JWKS)
 // This matches the trustedClients configuration in auth-server
 const OAUTH_CLIENT_ID = process.env.OAUTH_CLIENT_ID || "agent-factory-public-client";
+const SITE_URL = process.env.SITE_URL || "https://agentfactory.panaversity.org";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -24,9 +25,9 @@ const hydrateEnabled = process.env.R2_HYDRATE_ENABLED === "true";
 const docsPath = hydrateEnabled ? "../build-source" : "docs";
 
 const config: Config = {
-  title: "Agent Factory",
+  title: "Fynsera",
   tagline:
-    "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs",
+    "Build AI-Native Companies",
   favicon: "favicon.png",
 
   // Custom fields accessible via useDocusaurusContext().siteConfig.customFields
@@ -41,7 +42,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: "https://agentfactory.panaversity.org",
+  url: SITE_URL,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -143,7 +144,7 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap",
       },
     },
   ],
@@ -288,30 +289,30 @@ const config: Config = {
 
     // Open Graph metadata for social media sharing
     metadata: [
-      { property: "og:title", content: "The AI Agent Factory" },
+      { property: "og:title", content: "Fynsera | Build AI-Native Companies" },
       {
         property: "og:description",
         content:
-          "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs",
+          "The practical company-building system for agentic AI, finance, and startup execution.",
       },
       { property: "og:type", content: "website" },
       {
         property: "og:image",
-        content: "https://agentfactory.panaversity.org/img/og-image.jpg",
+        content: `${SITE_URL}/img/og-image.jpg`,
       },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:url", content: "https://agentfactory.panaversity.org" },
+      { property: "og:url", content: SITE_URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "The AI Agent Factory" },
+      { name: "twitter:title", content: "Fynsera | Build AI-Native Companies" },
       {
         name: "twitter:description",
         content:
-          "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs",
+          "The practical company-building system for agentic AI, finance, and startup execution.",
       },
       {
         name: "twitter:image",
-        content: "https://agentfactory.panaversity.org/img/og-image.jpg",
+        content: `${SITE_URL}/img/og-image.jpg`,
       },
     ],
 
@@ -324,9 +325,9 @@ const config: Config = {
       },
     },
     navbar: {
-      title: "Agent Factory",
+      title: "Fynsera",
       // logo: {
-      //   alt: 'Panaversity Logo',
+      //   alt: 'Fynsera Logo',
       //   src: 'img/book-cover.png',
       //   width: 32,
       //   height: 32,
@@ -376,23 +377,19 @@ const config: Config = {
           ],
         },
         {
-          title: "Community",
+          title: "Build",
           items: [
             {
-              label: "YouTube",
-              href: "https://youtube.com/@panaversity",
+              label: "Startup Guide",
+              to: "/docs/startup-guide",
             },
             {
-              label: "LinkedIn",
-              href: "https://linkedin.com/company/panaversity",
+              label: "Company Builder",
+              to: "/factory",
             },
             {
-              label: "Instagram",
-              href: "https://instagram.com/panaversity",
-            },
-            {
-              label: "Facebook",
-              href: "https://facebook.com/panaversity",
+              label: "Agentic Finance",
+              to: "/docs/AI-Tool-Landscape/claude-code-for-finance",
             },
           ],
         },
@@ -414,20 +411,20 @@ const config: Config = {
           ],
         },
         {
-          title: "About",
+          title: "Fynsera",
           items: [
             {
-              label: "Panaversity",
-              href: "https://panaversity.org/",
+              label: "Our Thesis",
+              to: "/docs/thesis",
             },
             {
-              label: "Our Mission",
-              href: "https://panaversity.org/#about",
+              label: "Company Builder",
+              to: "/factory",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <strong>Panaversity</strong> • The AI Agent Factory • Free & Open Source`,
+      copyright: `Copyright © ${new Date().getFullYear()} <strong>Fynsera</strong> • Build AI-Native Companies • Free & Open Source`,
     },
     prism: {
       theme: prismThemes.github,

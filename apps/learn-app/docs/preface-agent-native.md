@@ -1,7 +1,7 @@
 ---
-title: "PREFACE: The AI Agent Factory"
-description: "The Spec-Driven Blueprint for Building and Monetizing Digital FTEs"
-authors: ["Panaversity Team"]
+title: "PREFACE: Build AI-Native Companies"
+description: "The Fynsera guide to agentic AI, finance-native operations, and startup execution"
+authors: ["Fynsera Team"]
 date: "2025-01-11"
 status: "draft-restructured"
 part: "preface"
@@ -9,7 +9,7 @@ next: "/docs/part-1/chapter-1"
 sidebar_position: 0
 ---
 
-# PREFACE: The AI Agent Factory
+# PREFACE: Build AI-Native Companies
 
 What if your expertise could work while you sleep?
 
@@ -29,7 +29,7 @@ This is what encoded domain expertise is worth.
 
 ---
 
-## The Agent Factory Vision
+## The Fynsera Vision
 
 *This is a living book. The embedded presentation below is updated as the field evolves—ensuring you always have access to the latest frameworks and case studies.*
 

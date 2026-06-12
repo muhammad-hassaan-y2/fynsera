@@ -44,7 +44,7 @@ learning_objectives:
     bloom_level: "Understand"
     assessment_method: "Explanation of sandbox mode, file access patterns, and command approval workflows"
 
-- **Leads to**: Lesson 3 (free Gemini alternative) or Lesson 8 (Agent Skills)
+leads_to: "Lesson 3 (free Gemini alternative) or Lesson 8 (Agent Skills)"
 
 # Cognitive load tracking
 cognitive_load:

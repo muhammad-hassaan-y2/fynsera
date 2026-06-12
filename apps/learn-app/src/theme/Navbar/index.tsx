@@ -33,7 +33,7 @@ export default function Navbar() {
         <nav className="navbar navbar--fixed-top !p-0 !m-0 !bg-transparent !border-none !shadow-none !min-h-0 !block !z-40">
             <header
                 className={cn(
-                    "sticky top-0 z-40 w-full border-b transition-all duration-300",
+                    "fynsera-nav sticky top-0 z-40 w-full border-b transition-all duration-300",
                     isScrolled
                         ? "bg-background/95 backdrop-blur-xl border-border shadow-sm"
                         : "bg-background border-border/50"
@@ -44,12 +44,20 @@ export default function Navbar() {
                     {/* LEFT: Logo */}
                     <div className="flex items-center gap-2 shrink-0">
                         <Link to="/" className="flex items-center gap-2 font-bold text-base sm:text-lg md:text-xl tracking-tight text-foreground hover:no-underline hover:text-primary transition-colors whitespace-nowrap">
-                            <div className="h-7 w-7 sm:h-8 sm:w-8 bg-primary rounded-none flex items-center justify-center text-primary-foreground text-xs sm:text-sm font-bold shrink-0">
-                                AI
+                            <div className="fynsera-logo-mark h-7 w-7 sm:h-8 sm:w-8 flex items-center justify-center text-primary-foreground text-xs sm:text-sm font-bold shrink-0">
+                                FY
                             </div>
-                            <span>Agent Factory</span>
+                            <span>Fynsera</span>
                         </Link>
                     </div>
+
+                    {isHomepage && (
+                        <nav className="hidden lg:flex items-center gap-1 ml-8 mr-auto">
+                            <Button variant="ghost" asChild><Link to="/factory">Company Builder</Link></Button>
+                            <Button variant="ghost" asChild><Link to="/docs/startup-guide">Startup Guide</Link></Button>
+                            <Button variant="ghost" asChild><Link to="/docs/AI-Tool-Landscape/claude-code-for-finance">Agentic Finance</Link></Button>
+                        </nav>
+                    )}
 
                     {/* CENTER: Search Bar - Wider and centered on docs pages */}
                     {/* Shows at 997px+ to match Docusaurus sidebar breakpoint */}

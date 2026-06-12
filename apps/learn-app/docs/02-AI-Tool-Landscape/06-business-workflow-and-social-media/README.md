@@ -104,8 +104,8 @@ Choose your target based on your ambition and available time:
 |------|--------|-----------|
 | **Obsidian** | L01 | Set up as your Memory Bank |
 | **Obsidian MCP** | L01 | Access Memory Bank from anywhere |
-| **Git** | L01 (optional) | See [Chapter 10](/docs/AI-Tool-Landscape/git-fundamentals) for installation |
-| **Python 3.13+** | L08 (Silver tier) | See [Chapter 16](/docs/Introduction-to-Python/python-installation) for installation |
+| **Git** | L01 (optional) | See [Chapter 10](/docs/AI-Tool-Landscape/git-and-github) for installation |
+| **Python 3.13+** | L08 (Silver tier) | See [Chapter 16](/docs/Python-Fundamentals/introduction-to-python) for installation |
 | **PM2/Supervisord** | L10 (Silver tier) | Process management for Watchers |
 
 ### Hardware (for Silver/Gold)

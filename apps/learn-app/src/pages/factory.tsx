@@ -23,10 +23,88 @@ interface Checkpoint {
 
 const checkpoints: Checkpoint[] = [
   {
+    id: "S0",
+    title: "Validate Your AI-Native Company",
+    goal: "Turn a promising idea into a sharp customer problem, testable wedge, and evidence-based company thesis.",
+    status: "active",
+    actions: [
+      "Choose one painful workflow and one narrow customer segment",
+      "Interview at least five potential users and capture exact problem language",
+      "Define the agentic advantage: what work the product performs, not merely assists",
+      "Run a concierge pilot before building the full product",
+    ],
+    constraints: [
+      "Start with one workflow and one buyer",
+      "Do not count compliments as validation",
+      "The pilot must produce a measurable business outcome",
+    ],
+    deliverables: [
+      "One-page company thesis",
+      "Customer interview notes and ranked pain points",
+      "Pilot specification with a measurable success metric",
+      "Decision: pursue, revise, or stop",
+    ],
+    helpingLessons: "Fynsera Startup Guide + The Fynsera Thesis",
+    lessonsLink: "/docs/startup-guide",
+    successSignal: "A real customer agrees to test or pay for the first workflow.",
+  },
+  {
+    id: "S1",
+    title: "Install Finance-Native Operations",
+    goal: "Make runway, revenue, costs, approvals, and unit economics visible from the first customer.",
+    status: "locked",
+    actions: [
+      "Create a 24-month driver-based financial model",
+      "Connect invoicing, expenses, and cash accounts to a monthly close workflow",
+      "Define approval rules for spending, payments, and agent actions",
+      "Generate a founder dashboard for runway, burn, margin, and revenue",
+    ],
+    constraints: [
+      "Agents may prepare transactions, but a human approves movement of funds",
+      "Every financial number must have a source and audit trail",
+      "Track unit economics before scaling acquisition",
+    ],
+    deliverables: [
+      "Runway and scenario model",
+      "Monthly close checklist",
+      "Finance-agent specification with approval controls",
+      "Founder and investor reporting dashboard",
+    ],
+    helpingLessons: "Chapter 7: Claude Code for Finance",
+    lessonsLink: "/docs/AI-Tool-Landscape/claude-code-for-finance",
+    successSignal: "You can explain cash, runway, and unit economics in under five minutes.",
+  },
+  {
+    id: "S2",
+    title: "Add Blockchain Finance When It Earns Its Place",
+    goal: "Use blockchain only where stablecoin settlement, programmable ownership, or verifiable records create a real advantage.",
+    status: "locked",
+    actions: [
+      "Choose a justified use case: stablecoin invoicing, treasury, escrow, or on-chain proof",
+      "Design wallet, key-management, reconciliation, and compliance controls",
+      "Build a testnet workflow with human approval for every transaction",
+      "Measure cost, speed, and operational risk against conventional finance",
+    ],
+    constraints: [
+      "No speculative token is required",
+      "Never let an autonomous agent control production private keys",
+      "Document jurisdiction-specific compliance requirements before launch",
+    ],
+    deliverables: [
+      "Blockchain use-case decision memo",
+      "Testnet transaction and reconciliation workflow",
+      "Wallet security and incident-response policy",
+      "Go or no-go comparison against traditional rails",
+    ],
+    helpingLessons: "Finance-Native Operations + Production Security",
+    lessonsLink: "/docs/AI-Cloud-Native-Development/production-security",
+    successSignal: "The blockchain workflow is safer or materially better than conventional rails.",
+  },
+  {
     id: "A1",
     title: "Extract Your Human Job Into Skills",
     goal: "Turn what you already do into 3–5 focused, reusable capabilities that replace parts of your own job and could help others with similar work.",
-    status: "active",
+    status: "locked",
     actions: [
       "Describe your daily/weekly work to Claude Code",
       "Identify repeatable cognitive tasks (decisions, writing, analysis, coordination)",
@@ -305,7 +383,7 @@ const checkpoints: Checkpoint[] = [
       "Documentation: pricing model, CAC, unit economics",
       "Testimonial or case study from first customer",
     ],
-    helpingLessons: "The Agent Factory Thesis + All Prior Chapters",
+    helpingLessons: "The Fynsera Thesis + All Prior Chapters",
     lessonsLink: "/docs/thesis",
     successSignal: "You earned your first dollar from an AI employee you manufactured.",
   },
@@ -370,10 +448,10 @@ function CheckpointCard({ checkpoint, defaultExpanded = false }: { checkpoint: C
     <div
       id={`checkpoint-${checkpoint.id}`}
       className={`
-        border transition-all duration-300
+        fynsera-builder-card border transition-all duration-300 overflow-hidden
         ${isLocked
-          ? "border-border bg-muted/30 opacity-60"
-          : "border-border bg-card hover:border-primary/50"
+          ? "border-border/70 bg-muted/30 opacity-75"
+          : "border-primary/30 bg-card hover:border-primary/70 hover:-translate-y-0.5"
         }
       `}
     >
@@ -547,32 +625,33 @@ export default function FactoryPage(): ReactNode {
 
   return (
     <Layout
-      title="Factory Dashboard"
-      description="Your Agent Factory Dashboard - Track your progress building Digital FTEs"
+      title="Fynsera Company Builder"
+      description="Turn an idea into an AI-native company with guided agent, finance, product, and launch workflows."
     >
-      <div className="min-h-screen bg-background">
+      <div className="fynsera-surface min-h-screen bg-background">
 
         {/* Hero Section - Public & Welcoming */}
-        <header className="relative border-b border-border bg-gradient-to-b from-primary/5 to-background">
-          <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+        <header className="relative overflow-hidden border-b border-border/70">
+          <div className="fynsera-grid absolute inset-0 opacity-50" />
+          <div className="relative max-w-6xl mx-auto px-6 py-20 md:py-28">
             {/* Badge */}
             <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono text-xs font-bold tracking-widest uppercase text-primary px-3 py-1.5 border border-primary/30 bg-primary/10">
-                Your Journey
+              <span className="fynsera-kicker px-3 py-1.5 border border-primary/30 bg-primary/10 rounded-full">
+                Fynsera Company Builder
               </span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground mb-6 leading-[1.1]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.06em] text-foreground mb-7 leading-[.98]">
               Build Your
-              <span className="text-primary block">Agent Factory</span>
+              <span className="fynsera-gradient-text block">AI-Native Company</span>
             </h1>
 
             {/* Thesis Statement */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mb-10">
               In the AI era, the most valuable companies won't sell software—they'll{" "}
-              <span className="text-foreground font-semibold">manufacture AI employees</span>, powered by
-              agents, specs, skills, MCP, autonomy and cloud-native technologies.
+              <span className="text-foreground font-semibold">build operating intelligence</span>, combining
+              agents, financial controls, human approvals, and production infrastructure.
             </p>
 
           </div>
@@ -580,7 +659,7 @@ export default function FactoryPage(): ReactNode {
 
 
         {/* Main Content */}
-        <main className="max-w-6xl mx-auto px-6 py-12">
+        <main className="max-w-6xl mx-auto px-6 py-16">
 
           {/* Section: The Checklist */}
           <section className="mb-16">
@@ -598,8 +677,8 @@ export default function FactoryPage(): ReactNode {
                 { label: "Measure everything", desc: "Every skill has success metrics" },
                 { label: "Ship weekly", desc: "No learning without shipping" },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 bg-card border border-border hover:border-primary/30 transition-colors">
-                  <div className="w-8 h-8 border border-border flex items-center justify-center text-muted-foreground font-mono text-sm font-bold bg-muted">
+                <div key={i} className="fynsera-builder-card flex items-start gap-4 p-5 bg-card border border-border hover:border-primary/40 transition-all">
+                  <div className="w-9 h-9 rounded-lg border border-primary/20 flex items-center justify-center text-primary font-mono text-sm font-bold bg-primary/10">
                     {i + 1}
                   </div>
                   <div>
@@ -617,7 +696,7 @@ export default function FactoryPage(): ReactNode {
               <div className="flex items-center gap-3">
                 <div className="w-1 h-6 bg-cyan-500" />
                 <h2 className="font-mono text-sm uppercase tracking-wider text-muted-foreground">
-                  Portfolio Checkpoints
+                  Company-Building Checkpoints
                 </h2>
               </div>
               <div className="flex items-center gap-4 text-xs font-mono">
@@ -636,7 +715,7 @@ export default function FactoryPage(): ReactNode {
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {checkpoints.map((checkpoint) => (
                 <CheckpointCard
                   key={checkpoint.id}
@@ -656,7 +735,7 @@ export default function FactoryPage(): ReactNode {
               </h2>
             </div>
 
-            <div className="p-8 border border-dashed border-border bg-muted/20 text-center">
+            <div className="fynsera-builder-card p-10 border border-dashed border-border bg-muted/20 text-center">
               <p className="text-muted-foreground font-mono text-sm mb-4">
                 Accelerate your portfolio with external challenges
               </p>
@@ -673,7 +752,7 @@ export default function FactoryPage(): ReactNode {
             </p>
             <Link
               to="/docs/thesis"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-card border border-border hover:border-primary/50 hover:bg-muted/50 transition-all text-foreground font-medium"
+              className="fynsera-builder-card inline-flex items-center gap-3 px-8 py-4 bg-card border border-border hover:border-primary/50 hover:bg-muted/50 transition-all text-foreground font-medium"
             >
               <BookOpen className="w-5 h-5 text-primary" />
               Open the Reference Manual

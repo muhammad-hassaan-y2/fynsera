@@ -607,7 +607,7 @@ export function DocPageActions() {
             const sections: string[] = [
                 `# ${currentChapter.part}: ${currentChapter.title}`,
                 '',
-                `> Downloaded from Agent Factory on ${new Date().toLocaleDateString()}`,
+                `> Downloaded from Fynsera on ${new Date().toLocaleDateString()}`,
                 `> Total lessons: ${currentChapter.lessons.length}`,
                 '',
                 '## Table of Contents',

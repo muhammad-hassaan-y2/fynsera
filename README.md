@@ -1,10 +1,10 @@
-# 🏭 The AI Agent Factory
+# Fynsera
 
-> **The Spec-Driven Blueprint for Building and Monetizing Digital FTEs**
+> **Build AI-Native Companies**
 >
-> **Empowering developers, entrepreneurs, and organizations to learn, build, and monetize intelligent AI agents — creating reliable Digital FTEs you can trust, deploy, and scale.**
+> **A practical company-building system for agentic AI, finance-native operations, startup execution, and production infrastructure.**
 
-📚 **Live Book**: [https://agentfactory.panaversity.org](https://agentfactory.panaversity.org) | [Panaversity Books](https://panaversity.com/books/ai-native-software-development)
+**Product:** Fynsera Company Builder | **Guide:** Agentic AI, finance-native operations, and startup execution
 
 ---
 
@@ -133,9 +133,7 @@ The future of software development is collaborative, conversational, and powered
 3. **Build alongside AI** — Start with Python basics, gradually master AI-native architectures
 4. **Deploy to production** — By the end, you'll be running scalable, intelligent systems
 
-📘 **Read the book**: [https://agentfactory.panaversity.org](https://agentfactory.panaversity.org)
-
-🎓 **Panaversity Programs**: [https://panaversity.com/books/ai-native-software-development](https://panaversity.com/books/ai-native-software-development)
+**Start building:** Open the Fynsera Startup Guide and Company Builder in the learning app.
 
 ---
 

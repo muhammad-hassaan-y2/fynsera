@@ -1,20 +1,22 @@
 import Link from "@docusaurus/Link";
-import { Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siYoutube, siInstagram, siFacebook } from "simple-icons/icons";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-background border-t border-border/50 text-foreground pt-16 pb-8 px-4 md:px-8 overflow-hidden font-sans">
+        <footer className="fynsera-surface border-t border-border/50 text-foreground pt-20 pb-8 px-4 md:px-8 overflow-hidden font-sans">
             <div className="mx-auto max-w-[1800px]">
                 {/* Top Section */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
                     {/* Brand / Newsletter - Spans 5 columns */}
                     <div className="md:col-span-5 flex flex-col justify-between h-full">
                         <div>
-                            <h3 className="text-2xl font-semibold mb-6 tracking-tight">The AI Agent Factory</h3>
+                            <div className="flex items-center gap-3 mb-5">
+                                <div className="fynsera-logo-mark h-10 w-10 flex items-center justify-center text-primary-foreground text-sm font-bold">FY</div>
+                                <h3 className="text-2xl font-extrabold tracking-tight">Fynsera</h3>
+                            </div>
+                            <p className="text-muted-foreground max-w-md leading-relaxed">The operating system for founders building AI-native companies with agentic workflows, financial control, and repeatable execution.</p>
                         </div>
                     </div>
 
@@ -44,76 +46,36 @@ export default function Footer() {
                         <div className="flex flex-col gap-2">
                             <h4 className="font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2">Company</h4>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="https://panaversity.org/">About Us</Link>
+                                <Link to="/docs/thesis">Our Thesis</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="https://panaversity.org/#about">Our Mission</Link>
+                                <Link to="/factory">Company Builder</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="https://panaversity.org/contact">Contact</Link>
+                                <Link to="/docs/AI-Tool-Landscape/claude-code-for-finance">Agentic Finance</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="https://panaversity.org/privacy-policy">Privacy</Link>
+                                <Link to="/docs/AI-Native-Software-Development/introduction-to-ai-agents">Build Agents</Link>
                             </Button>
                         </div>
                     </div>
                 </div>
 
                 {/* BIG TYPE Section */}
-                <div className="w-full pt-16 pb-12 overflow-hidden flex justify-center px-4 md:px-0">
-                    <svg
-                        viewBox="0 0 100 14"
-                        className="w-full h-auto select-none pointer-events-none opacity-90"
-                        aria-label="Panaversity"
-                    >
-                        <text
-                            x="50"
-                            y="50%"
-                            dominantBaseline="middle"
-                            textAnchor="middle"
-                            fill="currentColor"
-                            className="font-light uppercase tracking-[-0.08em]"
-                            style={{ fontSize: '15x', fontFamily: 'var(--font-sans)', transform: 'scaleY(0.95)' }}
-                        >
-                            PANAVERSITY
-                        </text>
-                    </svg>
+                <div className="w-full py-10 border-y border-border/60 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <p className="fynsera-gradient-text text-5xl md:text-7xl font-extrabold tracking-[-0.07em]">Build what operates.</p>
+                    <p className="fynsera-kicker">Agents / Finance / Execution</p>
                 </div>
 
                 {/* Bottom Section */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-sm text-muted-foreground">
                     <div>
-                        &copy; {currentYear} Panaversity. Open Source Education.
+                        &copy; {currentYear} Fynsera. Build AI-Native Companies.
                     </div>
 
-                    <div className="flex gap-2">
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link to="https://youtube.com/@panaversity" aria-label="YouTube">
-                                <svg role="img" viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
-                                    <path d={siYoutube.path} />
-                                </svg>
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link to="https://linkedin.com/company/panaversity" aria-label="LinkedIn">
-                                <Linkedin />
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link to="https://instagram.com/panaversity" aria-label="Instagram">
-                                <svg role="img" viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
-                                    <path d={siInstagram.path} />
-                                </svg>
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link to="https://facebook.com/panaversity" aria-label="Facebook">
-                                <svg role="img" viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor">
-                                    <path d={siFacebook.path} />
-                                </svg>
-                            </Link>
-                        </Button>
-                    </div>
+                    <Button variant="outline" asChild>
+                        <Link to="/factory">Open Company Builder</Link>
+                    </Button>
                 </div>
             </div>
         </footer>

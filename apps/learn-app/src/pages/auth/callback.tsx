@@ -152,7 +152,7 @@ export default function OAuthCallback(): React.JSX.Element {
               Successfully signed in!
             </h2>
             <p style={{ color: 'var(--ifm-font-color-secondary)' }}>
-              Redirecting you back to The AI Agent Factory...
+              Redirecting you back to Fynsera...
             </p>
           </>
         )}

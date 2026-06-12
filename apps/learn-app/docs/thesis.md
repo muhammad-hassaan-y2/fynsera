@@ -1,5 +1,5 @@
 ---
-title: "The Agent Factory Thesis"
+title: "The Fynsera Thesis"
 sidebar_position: -2
 pagination_prev: null
 ---

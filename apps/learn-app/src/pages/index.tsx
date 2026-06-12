@@ -11,82 +11,103 @@ import { IDEShowcaseSection } from "@/components/HeroIDESimulation";
 import styles from "./index.module.css";
 
 
-import { ThreeDBook } from "@/components/ThreeDBook";
-import { Code, Container, Cpu, Terminal, ArrowRight, BookOpen, Layers, GitBranch, Bot, Server, GraduationCap } from "lucide-react";
+import { Code, Container, Cpu, Terminal, ArrowRight, BookOpen, Layers, GitBranch, Bot, Server, GraduationCap, WalletCards, ShieldCheck, TrendingUp, Sparkles, CircleDollarSign } from "lucide-react";
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx(styles.heroBanner, "relative overflow-hidden border-b border-border/40")}>
-      <div className="max-w-[1800px] mx-auto relative z-10 h-full">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] min-h-[85vh]">
-
-          {/* LEFT COLUMN: Technical Content */}
-          <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 py-12 lg:py-0 border-r border-border/40">
-
-            {/* Semantic Badge */}
-            <div className="flex items-center gap-3 mb-8">
-              <span className="font-mono text-xs font-bold tracking-widest uppercase text-muted-foreground/80 px-2 py-1 border border-border bg-muted/20">
-                AI-First Future
+    <header className={clsx(styles.heroBanner, "fynsera-surface relative overflow-hidden border-b border-border/50")}>
+      <div className="fynsera-grid absolute inset-0 opacity-60" />
+      <div className="max-w-[1600px] mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_.95fr] min-h-[88vh] gap-8">
+          <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 py-20 lg:py-24">
+            <div className="flex flex-wrap items-center gap-3 mb-8">
+              <span className="fynsera-kicker px-3 py-1.5 border border-primary/25 bg-primary/5 rounded-full">
+                The AI-Native Company OS
               </span>
-              <span className="w-12 h-[1px] bg-border"></span>
-              <span className="font-mono text-xs text-muted-foreground/60 tracking-wider">
-                BUILD & MONETIZE DIGITAL FTEs
+              <span className="font-mono text-[11px] text-muted-foreground tracking-wide">
+                Agents / Finance / Execution
               </span>
             </div>
 
-            {/* Heading */}
-            <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter text-foreground leading-[1.0] uppercase">
-                THE AI AGENT <br />
-                <span className="text-primary block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight mt-1">
-                  FACTORY
-                </span>
+            <div className="space-y-6 mb-10">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-[5.8rem] font-extrabold tracking-[-0.065em] text-foreground leading-[.96]">
+                Build companies
+                <span className="fynsera-gradient-text block mt-2">that can operate.</span>
               </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-normal leading-[1.6] max-w-xl">
-                The <span className="text-foreground font-medium">Spec-Driven Blueprint</span> for Building and Monetizing Digital FTEs. Full-Time Equivalent <span className="text-foreground font-medium">Reliable AI Agents</span> you can trust, deploy, and scale.
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-[1.75] max-w-2xl">
+                Fynsera turns your company thesis into coordinated agents, finance controls, and weekly execution systems, with humans approving the decisions that matter.
               </p>
             </div>
 
-            {/* CTA Area */}
-            <div className="flex flex-col items-start gap-4 sm:gap-6 mb-12 sm:mb-16">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-                <Button asChild size="lg" className="h-11 sm:h-14 px-5 sm:px-8 text-sm sm:text-lg font-bold rounded-none bg-primary hover:bg-primary/90 text-primary-foreground transition-all">
-                  <Link to="/docs/thesis" className="flex items-center gap-2 sm:gap-3">
-                    START READING <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            <div className="flex flex-col items-start gap-6">
+              <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                <Button asChild size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base font-bold rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/15">
+                  <Link to="/docs/startup-guide" className="flex items-center gap-3">
+                    Start building <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-11 sm:h-14 px-5 sm:px-8 text-sm sm:text-lg font-bold rounded-none transition-all">
-                  <Link to="https://panaversity.org/">
-                    Explore Panaversity
-                  </Link>
+                <Button asChild variant="outline" size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base font-bold rounded-xl bg-background/60 backdrop-blur">
+                  <Link to="/factory">Open Company Builder</Link>
                 </Button>
               </div>
-              <div className="text-xs sm:text-sm text-muted-foreground font-mono">
-                // Open Source
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground font-mono">
+                <span>Human approvals built in</span>
+                <span>Open source foundation</span>
               </div>
-            </div>
-
-          </div>
-
-          {/* RIGHT COLUMN: The Artifact (Book) */}
-          <div className="relative w-full h-full min-h-[500px] flex items-center justify-center">
-            {/* Technical Grid Background */}
-            <div className="absolute inset-0 opacity-[0.03]"
-              style={{ backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
-            </div>
-
-            {/* Spotlight Effect */}
-            <div className={styles.heroSpotlight} />
-
-            <div className="relative z-10 transform transition-transform duration-700 hover:scale-[1.28] scale-[1.25]">
-              <ThreeDBook
-                src="/img/book-cover-page.png"
-                alt="The AI Agent Factory Book Cover"
-              />
             </div>
           </div>
 
+          <div className="relative w-full min-h-[580px] flex items-center justify-center px-6 pb-16 lg:py-20 lg:pr-12">
+            <div className="fynsera-panel relative z-10 w-full max-w-[620px] p-4 sm:p-6">
+              <div className="flex items-center justify-between pb-5 mb-5 border-b border-border/70">
+                <div>
+                  <p className="fynsera-kicker mb-2">Founder command center</p>
+                  <h2 className="text-xl sm:text-2xl font-bold text-foreground">Fynsera Operations</h2>
+                </div>
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
+                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse" /> Live
+                </span>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                {[
+                  { label: "Runway", value: "18.4 mo", delta: "+2.1", icon: WalletCards },
+                  { label: "Agent output", value: "94.2%", delta: "+4.8%", icon: Sparkles },
+                  { label: "Gross margin", value: "72%", delta: "+6%", icon: TrendingUp },
+                  { label: "Approvals", value: "03", delta: "Review", icon: ShieldCheck },
+                ].map(({ label, value, delta, icon: Icon }) => (
+                  <div key={label} className="fynsera-card bg-background/70 border border-border/70 p-4 sm:p-5">
+                    <div className="flex items-center justify-between mb-4">
+                      <Icon className="w-4 h-4 text-primary" />
+                      <span className="font-mono text-[10px] text-primary">{delta}</span>
+                    </div>
+                    <div className="text-xl sm:text-2xl font-extrabold text-foreground">{value}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="fynsera-card bg-foreground text-background p-5 sm:p-6">
+                <div className="flex items-center justify-between gap-4 mb-5">
+                  <div>
+                    <p className="font-mono text-[10px] uppercase tracking-widest text-background/55 mb-2">This week's operating loop</p>
+                    <h3 className="text-lg font-bold tracking-tight">Launch finance-agent pilot</h3>
+                  </div>
+                  <CircleDollarSign className="w-7 h-7 text-primary" />
+                </div>
+                <div className="space-y-3">
+                  {["Validate buyer workflow", "Connect finance controls", "Review agent evaluation"].map((item, index) => (
+                    <div key={item} className="flex items-center gap-3 text-sm">
+                      <span className={`w-6 h-6 rounded-full flex items-center justify-center font-mono text-[10px] ${index === 0 ? "bg-primary text-primary-foreground" : "bg-background/10 text-background/60"}`}>
+                        {index + 1}
+                      </span>
+                      <span className={index === 0 ? "text-background" : "text-background/60"}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -115,6 +136,67 @@ function Feature({
         <p className="text-muted-foreground leading-relaxed text-sm">{description}</p>
       </div>
     </div>
+  );
+}
+
+function CompanyOperatingSystem() {
+  const systems = [
+    {
+      icon: Sparkles,
+      title: "Agentic Workforce",
+      description: "Design, evaluate, and deploy agents that complete measurable company workflows.",
+      signal: "Work performed",
+    },
+    {
+      icon: CircleDollarSign,
+      title: "Finance Control",
+      description: "Track runway, margin, approvals, close, and investor reporting from day one.",
+      signal: "Capital governed",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Human Governance",
+      description: "Keep payments, filings, sensitive actions, and exceptions under human approval.",
+      signal: "Risk controlled",
+    },
+    {
+      icon: TrendingUp,
+      title: "Founder Execution",
+      description: "Turn startup guidance into weekly milestones, evidence, and operating decisions.",
+      signal: "Progress compounded",
+    },
+  ];
+
+  return (
+    <section className="py-20 md:py-28 border-b border-border/50">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-12">
+        <div className="grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-20 items-end mb-14">
+          <div>
+            <p className="fynsera-kicker mb-4">One operating system</p>
+            <h2 className="text-4xl md:text-6xl font-extrabold text-foreground leading-[1.02]">
+              From company idea to operating intelligence.
+            </h2>
+          </div>
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl lg:justify-self-end">
+            Fynsera connects the systems founders usually manage separately: agent execution,
+            financial truth, governance, and the evidence needed to make the next decision.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+          {systems.map(({ icon: Icon, title, description, signal }) => (
+            <article key={title} className="fynsera-card bg-card border border-border/70 p-6 md:p-7">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-8">
+                <Icon className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-extrabold text-foreground mb-3">{title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-8">{description}</p>
+              <p className="fynsera-kicker pt-4 border-t border-border/70">{signal}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -688,15 +770,15 @@ function FinalCTA() {
     <section className="py-24 border-b border-border/40 bg-background">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 text-center pt-12 pb-12 min-h-[400px] flex flex-col items-center justify-center">
         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Ready to Build Your Agent Factory?
+          Ready to Build an AI-Native Company?
         </h3>
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Transform your domain expertise into Digital FTEs that work 24/7
-          and generate recurring revenue
+          Turn expertise into reliable agents, finance workflows, and a company
+          that can learn and operate continuously.
         </p>
         <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-semibold" asChild>
-          <Link to="/docs/thesis">
-            Start Reading
+          <Link to="/docs/startup-guide">
+            Open Startup Guide
           </Link>
         </Button>
       </div>
@@ -708,19 +790,22 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title="The AI Agent Factory"
-      description="The Spec-Driven Blueprint for Building and Monetizing Digital FTEs. Full-Time Equivalent Reliable AI Agents you can trust, deploy, and scale."
+      title="Fynsera | Build AI-Native Companies"
+      description="Build and operate AI-native companies with agentic workflows, finance systems, and practical startup guides."
     >
-      <HomepageHeader />
-      <AgentFactoryThesis />
-      <DigitalFTEComparison />
-      <AISpectrumSection />
-      <FeaturesSection />
-      <MaturityLevelsSection />
-      <ParadigmShift />
-      <IDEShowcaseSection />
-      <MonetizationModels />
-      <FinalCTA />
+      <div className="fynsera-home">
+        <HomepageHeader />
+        <CompanyOperatingSystem />
+        <AgentFactoryThesis />
+        <DigitalFTEComparison />
+        <AISpectrumSection />
+        <FeaturesSection />
+        <MaturityLevelsSection />
+        <ParadigmShift />
+        <IDEShowcaseSection />
+        <MonetizationModels />
+        <FinalCTA />
+      </div>
     </Layout>
   );
 }
