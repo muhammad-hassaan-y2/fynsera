@@ -412,7 +412,7 @@ aside[class*='sidebar'] .menu__link--active {
   }
 
   .theme-doc-sidebar-container::before {
-    content: "Fynsera field manual";
+    content: "Fynsera practical guide";
     display: block;
     margin: 1.4rem 1.1rem 0;
     color: var(--primary);

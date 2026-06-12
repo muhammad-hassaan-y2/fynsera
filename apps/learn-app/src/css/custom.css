@@ -418,3 +418,60 @@ ul.tabs[role="tablist"] {
     font-weight: 600;
     letter-spacing: -0.045em;
 }
+
+.font-reading {
+    font-family: var(--font-reading);
+}
+
+.fynsera-guide-cover {
+    position: relative;
+    width: min(100%, 460px);
+    min-height: 620px;
+    transform: rotate(1.5deg);
+    transition: transform 240ms ease, filter 240ms ease;
+    filter: drop-shadow(0 34px 34px color-mix(in oklch, var(--foreground) 15%, transparent));
+}
+
+.fynsera-guide-cover:hover {
+    transform: rotate(0deg) translateY(-6px);
+    filter: drop-shadow(0 44px 42px color-mix(in oklch, var(--foreground) 20%, transparent));
+}
+
+.fynsera-guide-cover__binding {
+    position: absolute;
+    inset: 10px auto 10px -13px;
+    width: 22px;
+    border-radius: 8px 2px 2px 8px;
+    background: linear-gradient(90deg, color-mix(in oklch, var(--primary) 58%, black), var(--primary));
+    box-shadow: inset -5px 0 8px rgb(0 0 0 / 18%);
+}
+
+.fynsera-guide-cover__body {
+    position: relative;
+    min-height: 620px;
+    padding: clamp(1.8rem, 5vw, 3rem);
+    overflow: hidden;
+    border: 1px solid color-mix(in oklch, var(--primary) 28%, var(--border));
+    border-radius: 5px 18px 18px 5px;
+    background:
+        radial-gradient(circle at 85% 8%, color-mix(in oklch, var(--primary) 13%, transparent), transparent 34%),
+        linear-gradient(135deg, color-mix(in oklch, var(--card) 97%, var(--primary)), var(--card));
+}
+
+.fynsera-guide-cover__body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(color-mix(in oklch, var(--border) 22%, transparent) 1px, transparent 1px);
+    background-size: 100% 30px;
+    mask-image: linear-gradient(to bottom, transparent 15%, black 60%, transparent);
+    opacity: .35;
+}
+
+@media (max-width: 640px) {
+    .fynsera-guide-cover,
+    .fynsera-guide-cover__body {
+        min-height: 560px;
+    }
+}

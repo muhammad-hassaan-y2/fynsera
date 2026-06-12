@@ -74,7 +74,7 @@ export default function Navbar() {
                             <Button variant="ghost" asChild>
                                 <Link to="/docs/preface-agent-native">
                                     <BookOpen className="w-4 h-4" />
-                                    Read Book
+                                    Read Guide
                                 </Link>
                             </Button>
                             <Button variant="ghost" asChild>
@@ -123,7 +123,7 @@ export default function Navbar() {
                             <SheetContent side="right" className="w-[300px] sm:w-[350px] flex flex-col p-0 overflow-hidden">
                                 <SheetHeader className="px-4 py-3 border-b border-border shrink-0">
                                     <SheetTitle className="text-left text-base font-semibold">
-                                        {isDocPage ? 'Book Navigation' : 'Menu'}
+                                        {isDocPage ? 'Guide Navigation' : 'Menu'}
                                     </SheetTitle>
                                 </SheetHeader>
 
@@ -145,7 +145,7 @@ export default function Navbar() {
                                             <Button variant="ghost" asChild className="justify-start h-12" onClick={() => setMobileMenuOpen(false)}>
                                                 <Link to="/docs/preface-agent-native">
                                                     <BookOpen className="w-5 h-5" />
-                                                    Read Book
+                                                    Read Guide
                                                 </Link>
                                             </Button>
                                             <Button variant="ghost" asChild className="justify-start h-12" onClick={() => setMobileMenuOpen(false)}>

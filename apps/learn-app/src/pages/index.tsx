@@ -7,11 +7,12 @@ import Heading from "@theme/Heading";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { IDEShowcaseSection } from "@/components/HeroIDESimulation";
+import GuideCover from "@/components/GuideCover";
 
 import styles from "./index.module.css";
 
 
-import { Code, Container, Cpu, Terminal, ArrowRight, BookOpen, Layers, GitBranch, Bot, Server, GraduationCap, WalletCards, ShieldCheck, TrendingUp, Sparkles, CircleDollarSign } from "lucide-react";
+import { Code, Container, Cpu, Terminal, ArrowRight, BookOpen, Layers, GitBranch, Bot, Server, GraduationCap, ShieldCheck, TrendingUp, Sparkles, CircleDollarSign } from "lucide-react";
 
 function HomepageHeader() {
   return (
@@ -57,56 +58,8 @@ function HomepageHeader() {
             </div>
           </div>
 
-          <div className="relative w-full min-h-[580px] flex items-center justify-center px-6 pb-16 lg:py-20 lg:pr-12">
-            <div className="fynsera-panel relative z-10 w-full max-w-[620px] p-4 sm:p-6">
-              <div className="flex items-center justify-between pb-5 mb-5 border-b border-border/70">
-                <div>
-                  <p className="fynsera-kicker mb-2">Founder command center</p>
-                  <h2 className="text-xl sm:text-2xl font-bold text-foreground">Fynsera Operations</h2>
-                </div>
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
-                  <span className="w-2 h-2 bg-primary rounded-full animate-pulse" /> Live
-                </span>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 mb-4">
-                {[
-                  { label: "Runway", value: "18.4 mo", delta: "+2.1", icon: WalletCards },
-                  { label: "Agent output", value: "94.2%", delta: "+4.8%", icon: Sparkles },
-                  { label: "Gross margin", value: "72%", delta: "+6%", icon: TrendingUp },
-                  { label: "Approvals", value: "03", delta: "Review", icon: ShieldCheck },
-                ].map(({ label, value, delta, icon: Icon }) => (
-                  <div key={label} className="fynsera-card bg-background/70 border border-border/70 p-4 sm:p-5">
-                    <div className="flex items-center justify-between mb-4">
-                      <Icon className="w-4 h-4 text-primary" />
-                      <span className="font-mono text-[10px] text-primary">{delta}</span>
-                    </div>
-                    <div className="text-xl sm:text-2xl font-extrabold text-foreground">{value}</div>
-                    <div className="text-xs text-muted-foreground mt-1">{label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="fynsera-card bg-foreground text-background p-5 sm:p-6">
-                <div className="flex items-center justify-between gap-4 mb-5">
-                  <div>
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-background/55 mb-2">This week's operating loop</p>
-                    <h3 className="text-lg font-bold tracking-tight">Launch finance-agent pilot</h3>
-                  </div>
-                  <CircleDollarSign className="w-7 h-7 text-primary" />
-                </div>
-                <div className="space-y-3">
-                  {["Validate buyer workflow", "Connect finance controls", "Review agent evaluation"].map((item, index) => (
-                    <div key={item} className="flex items-center gap-3 text-sm">
-                      <span className={`w-6 h-6 rounded-full flex items-center justify-center font-mono text-[10px] ${index === 0 ? "bg-primary text-primary-foreground" : "bg-background/10 text-background/60"}`}>
-                        {index + 1}
-                      </span>
-                      <span className={index === 0 ? "text-background" : "text-background/60"}>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="relative w-full min-h-[580px] flex items-center justify-center px-8 pb-16 lg:py-20 lg:pr-16">
+            <GuideCover />
           </div>
         </div>
       </div>
@@ -213,7 +166,7 @@ function AISpectrumSection() {
             The AI Development Spectrum
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Three distinct approaches to AI in software development. This book
+            Three distinct approaches to AI in software development. This guide
             teaches you both AI-Driven and AI-Native development.
           </p>
         </div>
@@ -322,7 +275,7 @@ function FeaturesSection() {
               </span>
             </div>
             <h2 className="text-4xl font-black tracking-tight text-foreground uppercase">
-              What Makes This Book Different
+              What This Guide Covers
 
             </h2>
           </div>
@@ -361,7 +314,7 @@ function FeaturesSection() {
           <Feature
             icon={GraduationCap}
             title="Complete Learning Journey"
-            description="46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production."
+            description="A structured path from programming foundations to building, evaluating, and deploying agentic systems."
           />
         </div>
       </div>
@@ -375,7 +328,7 @@ function MaturityLevelsSection() {
       number: 1,
       title: "AI Awareness",
       subtitle: "Experimenting",
-      impact: "10-20% productivity gains",
+      impact: "Measure current workflow",
       description: "Individual developers experimenting with AI coding tools. Early AI Assisted Development.",
       approach: "AI Assisted (Individual)",
     },
@@ -383,7 +336,7 @@ function MaturityLevelsSection() {
       number: 2,
       title: "AI Adoption",
       subtitle: "Standardizing",
-      impact: "30-40% productivity boost",
+      impact: "Measure team adoption",
       description: "Organization-wide adoption with governance. Established guidelines and security policies.",
       approach: "AI Assisted (Team)",
     },
@@ -391,7 +344,7 @@ function MaturityLevelsSection() {
       number: 3,
       title: "AI Integration",
       subtitle: "Transforming Workflows",
-      impact: "2-3x faster development",
+      impact: "Measure delivery quality",
       description: "AI-Driven Development practices. Specs become living documentation. Workflows redesigned around AI collaboration.",
       approach: "AI Driven (Workflow)",
     },
@@ -408,7 +361,7 @@ function MaturityLevelsSection() {
       number: 5,
       title: "AI-First Enterprise",
       subtitle: "Living in the Future",
-      impact: "10x productivity",
+      impact: "Measure business outcomes",
       description: "Entire organization AI-native. Custom models, self-improving systems, AI embedded in every aspect.",
       approach: "AI Native (Enterprise)",
     },
@@ -472,7 +425,7 @@ function MaturityLevelsSection() {
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
           <p className="text-muted-foreground">
-            <strong className="text-foreground">This book prepares you for Levels 3-4:</strong> Master
+            <strong className="text-foreground">This guide focuses on Levels 3-4:</strong> Develop
             AI-Driven workflows and build AI-Native products
           </p>
         </div>
@@ -550,7 +503,7 @@ function ParadigmShift() {
           {/* AI-Native Card */}
           <Card className="border-2 border-primary bg-card relative">
             <CardContent className="p-8">
-              <Badge className="absolute top-4 right-4">The Future</Badge>
+              <Badge className="absolute top-4 right-4">Guide focus</Badge>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-foreground">AI-Native Way</h3>
                 <p className="text-primary uppercase text-xs font-medium tracking-wider mt-1">The intelligence era</p>
@@ -574,12 +527,12 @@ function ParadigmShift() {
 
 function DigitalFTEComparison() {
   const comparisonData = [
-    { feature: "Availability", human: "40 hours/week", digital: "168 hours/week (24/7)", highlight: true },
-    { feature: "Monthly Cost", human: "$4,000 – $8,000+", digital: "$500 – $2,000", highlight: true },
-    { feature: "Ramp-up Time", human: "3 – 6 months", digital: "Instant deployment", highlight: false },
-    { feature: "Consistency", human: "Variable (85–95%)", digital: "Predictable (99%+)", highlight: false },
-    { feature: "Scaling", human: "Linear (hire 10 for 10x)", digital: "Exponential (instant clone)", highlight: true },
-    { feature: "Cost per Task", human: "$30 – $60", digital: "$3 – $6", highlight: true },
+    { feature: "Availability", human: "Defined by staffing plan", digital: "Defined by system reliability", highlight: true },
+    { feature: "Operating Cost", human: "Measure total employment cost", digital: "Measure infrastructure and review cost", highlight: true },
+    { feature: "Ramp-up Time", human: "Measure hiring and training time", digital: "Measure build and evaluation time", highlight: false },
+    { feature: "Consistency", human: "Measure with quality review", digital: "Measure with evaluations", highlight: false },
+    { feature: "Scaling", human: "Requires hiring and management", digital: "Requires capacity and control changes", highlight: true },
+    { feature: "Cost per Task", human: "Calculate from actual workflow", digital: "Calculate from actual workflow", highlight: true },
   ];
 
   return (
@@ -594,8 +547,8 @@ function DigitalFTEComparison() {
             Human FTE vs Digital FTE
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A Digital FTE works 168 hours a week with zero fatigue.
-            That's <span className="text-foreground font-semibold">4x the output</span> at a fraction of the cost.
+            Compare costs and outcomes using measurements from your own workflow.
+            Do not assume an agent is cheaper, faster, or more reliable before evaluating it.
           </p>
         </div>
 
@@ -633,16 +586,16 @@ function DigitalFTEComparison() {
         {/* Bottom Stats */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="text-center p-6 border border-border/40 bg-card">
-            <div className="text-3xl font-black text-primary mb-2">85-90%</div>
-            <div className="text-sm text-muted-foreground">Cost Savings per Task</div>
+            <div className="text-lg font-bold text-primary mb-2">Cost per completed task</div>
+            <div className="text-sm text-muted-foreground">Measure using your actual operating costs</div>
           </div>
           <div className="text-center p-6 border border-border/40 bg-card">
-            <div className="text-3xl font-black text-primary mb-2">4.2x</div>
-            <div className="text-sm text-muted-foreground">More Hours per Week</div>
+            <div className="text-lg font-bold text-primary mb-2">Successful completion rate</div>
+            <div className="text-sm text-muted-foreground">Evaluate against representative examples</div>
           </div>
           <div className="text-center p-6 border border-border/40 bg-card">
-            <div className="text-3xl font-black text-primary mb-2">9,000</div>
-            <div className="text-sm text-muted-foreground">Hours/Year (vs 2,000 human)</div>
+            <div className="text-lg font-bold text-primary mb-2">Human review burden</div>
+            <div className="text-sm text-muted-foreground">Track exceptions and approval time</div>
           </div>
         </div>
       </div>
@@ -655,7 +608,7 @@ function MonetizationModels() {
     {
       icon: "💼",
       title: "Digital FTE Subscription",
-      price: "$1k+/month",
+      price: "Validate pricing",
       description: "Fully managed, hosted agent. Hands-off automation for clients.",
       bestFor: "Agencies, Consultants",
     },
@@ -663,7 +616,7 @@ function MonetizationModels() {
       icon: "🎯",
       title: "Success Fee",
       price: "Pay-per-result",
-      description: "Commission on outcomes. $5 per lead, 2% of savings identified.",
+      description: "A fee tied to a clearly defined and independently measured outcome.",
       bestFor: "High-trust partnerships",
     },
     {
@@ -730,14 +683,14 @@ function AgentFactoryThesis() {
           <div className="text-6xl text-primary/30 mb-6">"</div>
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-8">
-            Build <span className="text-primary">Digital FTEs</span> that work <span className="text-primary">24/7</span>.
+            Build <span className="text-primary">evaluated agents</span> for clearly scoped workflows.
             Your domain expertise—whether in sales, legal, finance, or healthcare—becomes
-            an autonomous AI agent that never sleeps.
+            an evaluated agent with explicit operating boundaries.
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8">
             Transform your knowledge into scalable digital products that generate
-            <span className="text-foreground font-semibold"> recurring revenue</span> while you sleep.
+            <span className="text-foreground font-semibold"> a product customers can evaluate</span>.
           </p>
 
           {/* Three Pillars */}
@@ -796,14 +749,10 @@ export default function Home(): ReactNode {
       <div className="fynsera-home">
         <HomepageHeader />
         <CompanyOperatingSystem />
-        <AgentFactoryThesis />
-        <DigitalFTEComparison />
         <AISpectrumSection />
         <FeaturesSection />
-        <MaturityLevelsSection />
         <ParadigmShift />
         <IDEShowcaseSection />
-        <MonetizationModels />
         <FinalCTA />
       </div>
     </Layout>

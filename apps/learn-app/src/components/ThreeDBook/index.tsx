@@ -8,7 +8,7 @@ interface ThreeDBookProps {
     className?: string;
 }
 
-export const ThreeDBook: React.FC<ThreeDBookProps> = ({ src, alt = "Book Cover", className }) => {
+export const ThreeDBook: React.FC<ThreeDBookProps> = ({ src, alt = "Guide Cover", className }) => {
     const bookRef = React.useRef<HTMLDivElement>(null);
     const [rotate, setRotate] = React.useState({ x: 0, y: 0 });
 

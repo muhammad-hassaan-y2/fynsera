@@ -30,7 +30,7 @@ export default function Footer() {
                         <div className="flex flex-col gap-2">
                             <h4 className="font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2">Learn</h4>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="/docs/preface-agent-native">Start Reading</Link>
+                                <Link to="/docs/preface-agent-native">Open Guide</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
                                 <Link to="/docs/preface-agent-native">Curriculum</Link>

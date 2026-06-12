@@ -1675,7 +1675,7 @@ body:has(.theme-doc-markdown) {
 }
 
 .theme-doc-markdown > h1:first-child::before {
-  content: "Fynsera / Field note";
+  content: "Fynsera / Guide note";
   display: block;
   margin-bottom: 1.15rem;
   color: var(--primary);
