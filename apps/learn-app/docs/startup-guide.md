@@ -52,18 +52,7 @@ Treat financial control as product infrastructure from day one.
 
 **Exit test:** founders can explain the company's cash position and economics in five minutes.
 
-## 5. Add Blockchain Only When Justified
-
-Blockchain is useful when it materially improves settlement, ownership, escrow, or verification.
-
-- Prefer stablecoin payments or verifiable records over speculative token design.
-- Keep production private keys outside autonomous agent control.
-- Reconcile on-chain activity with the company's books.
-- Validate legal and compliance requirements before launch.
-
-**Exit test:** the blockchain workflow is safer, faster, or cheaper than conventional rails.
-
-## 6. Scale the Company Loop
+## 5. Scale the Company Loop
 
 Build a closed operating loop:
 

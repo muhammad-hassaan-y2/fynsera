@@ -21,7 +21,7 @@ The curriculum currently includes:
 - Agent frameworks, reusable skills, MCP, and conversational interfaces
 - Cloud-native deployment, LLM operations, and agent evaluation
 - Realtime voice agents, agentic frontends, and physical AI
-- A startup guide covering validation, finance controls, human approvals, and responsible blockchain use
+- A startup guide covering validation, finance controls, human approvals, and operational governance
 
 Use the chapter navigation to inspect the complete curriculum.
 
