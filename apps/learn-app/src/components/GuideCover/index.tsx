@@ -20,7 +20,7 @@ export default function GuideCover() {
       <div className="fynsera-guide-cover__binding" />
       <div className="fynsera-guide-cover__body">
         <div className="flex items-start justify-between gap-5">
-          <FynseraLogo className="fynsera-logo h-12 w-12" />
+          <FynseraLogo className="fynsera-logo h-16 w-16" />
           <span className="font-mono text-[10px] uppercase tracking-[.18em] text-primary">
             Living guide
           </span>

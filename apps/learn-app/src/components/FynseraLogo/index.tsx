@@ -13,28 +13,33 @@ export default function FynseraLogo({ className = '' }: FynseraLogoProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="40" height="40" rx="12" fill="currentColor" />
       <path
-        d="M9.5 11.5C14.4 11.5 18 12.8 20 15.4V30C17.7 27.5 14.2 26.2 9.5 26.2V11.5Z"
-        fill="var(--fynsera-logo-paper, #F8F1DF)"
+        d="M6 6.8C11.4 8.1 16.7 10.2 19 13.7V22.2C15.5 19.9 10.8 19.6 6 22.7V6.8Z"
+        fill="currentColor"
       />
       <path
-        d="M30.5 11.5C25.6 11.5 22 12.8 20 15.4V30C22.3 27.5 25.8 26.2 30.5 26.2V11.5Z"
-        fill="var(--fynsera-logo-paper, #F8F1DF)"
-        opacity=".72"
+        d="M34 6.8C28.6 8.1 23.3 10.2 21 13.7V17.9C24.7 14.5 29.1 13.7 34 13.2V6.8Z"
+        fill="currentColor"
       />
       <path
-        d="M13 16.2H20M13 20.2H20M20 15.4L26.8 11.5"
-        stroke="var(--fynsera-logo-ink, #103E35)"
-        strokeWidth="2"
+        d="M34 17.3C28.2 18 23.5 19.2 21 22.4V27.1C23 24.7 27.3 25.4 34 28.2V17.3Z"
+        fill="currentColor"
+      />
+      <path
+        d="M6.9 33.2C9.9 28.1 13.1 24.8 18.4 22.2C16.3 24.8 16.7 27.3 19.3 30C20.3 31.1 21 32.1 21.5 33.2H6.9Z"
+        fill="currentColor"
+      />
+      <path
+        d="M5.8 26.5C11.2 21.6 15.8 20.2 20.2 20.4C17.4 21.9 15.1 23.5 13.4 25.4C11.4 27.5 9.4 29.9 7.6 33.2"
+        stroke="var(--fynsera-logo-paper, #F8F1DF)"
+        strokeWidth="2.4"
         strokeLinecap="round"
       />
       <path
-        d="M24.2 11.5H27V14.3"
-        stroke="var(--fynsera-logo-ink, #103E35)"
-        strokeWidth="2"
+        d="M34.2 29.6C28.6 27.4 24.3 25.7 21.2 26.8C19.8 27.3 19 28.4 19 29.7C19 31.2 20.2 32.4 22.3 33.2"
+        stroke="var(--fynsera-logo-paper, #F8F1DF)"
+        strokeWidth="2.4"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
     </svg>
   );
