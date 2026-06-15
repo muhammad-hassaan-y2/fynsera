@@ -424,15 +424,15 @@ ul.tabs[role="tablist"] {
 }
 
 .fynsera-book-scene {
-    --book-width: 350px;
-    --book-height: 520px;
-    --book-depth: 42px;
+    --book-width: 340px;
+    --book-height: 510px;
+    --book-depth: 34px;
     position: relative;
-    width: min(100%, 600px);
-    height: 650px;
+    width: min(100%, 540px);
+    height: 610px;
     display: grid;
     place-items: center;
-    perspective: 1800px;
+    perspective: 2000px;
     isolation: isolate;
 }
 
@@ -441,13 +441,13 @@ ul.tabs[role="tablist"] {
     width: var(--book-width);
     height: var(--book-height);
     transform-style: preserve-3d;
-    transform: rotateX(calc(4deg + var(--book-tilt-x))) rotateY(calc(-18deg + var(--book-tilt-y))) rotateZ(1deg);
-    transition: transform 180ms ease-out;
+    transform: rotateX(calc(2deg + var(--book-tilt-x))) rotateY(calc(-12deg + var(--book-tilt-y)));
+    transition: transform 240ms ease-out;
     z-index: 2;
 }
 
 .fynsera-3d-book:hover {
-    transform: rotateX(calc(2deg + var(--book-tilt-x))) rotateY(calc(-11deg + var(--book-tilt-y))) rotateZ(0deg) translateY(-8px);
+    transform: rotateX(calc(1deg + var(--book-tilt-x))) rotateY(calc(-8deg + var(--book-tilt-y))) translateY(-3px);
 }
 
 .fynsera-3d-book__cover,
@@ -455,15 +455,15 @@ ul.tabs[role="tablist"] {
     position: absolute;
     inset: 0;
     overflow: hidden;
-    border-radius: 4px 14px 14px 4px;
-    background: #0b352b;
+    border-radius: 3px 10px 10px 3px;
+    background: #0c342a;
     backface-visibility: hidden;
 }
 
 .fynsera-3d-book__cover {
     transform: translateZ(calc(var(--book-depth) / 2));
-    border: 1px solid rgb(247 240 223 / 18%);
-    box-shadow: inset 1px 0 rgb(255 255 255 / 12%), inset -2px -2px 20px rgb(0 0 0 / 22%);
+    border: 1px solid rgb(247 240 223 / 13%);
+    box-shadow: inset 1px 0 rgb(255 255 255 / 8%), inset -1px -1px 18px rgb(0 0 0 / 16%);
 }
 
 .fynsera-3d-book__back {
@@ -475,14 +475,14 @@ ul.tabs[role="tablist"] {
     position: relative;
     z-index: 2;
     min-height: 100%;
-    padding: 2.4rem 2.2rem 2.1rem 2.6rem;
+    padding: 2.8rem 2.45rem 2.25rem 2.7rem;
     display: flex;
     flex-direction: column;
 }
 
 .fynsera-book-logo {
     color: #f7f0df;
-    filter: drop-shadow(0 4px 6px rgb(0 0 0 / 22%));
+    filter: none;
 }
 
 .fynsera-book-logo path[stroke] {
@@ -492,19 +492,10 @@ ul.tabs[role="tablist"] {
 .fynsera-3d-book__grain {
     position: absolute;
     inset: 0;
-    opacity: .32;
+    opacity: .16;
     background:
-        repeating-linear-gradient(87deg, transparent 0 3px, rgb(255 255 255 / 2%) 3px 4px),
-        radial-gradient(circle at 25% 12%, rgb(255 255 255 / 11%), transparent 30%),
-        linear-gradient(135deg, transparent 55%, rgb(0 0 0 / 18%));
-}
-
-.fynsera-3d-book__shine {
-    position: absolute;
-    inset: -20%;
-    opacity: .4;
-    background: linear-gradient(110deg, transparent 35%, rgb(255 255 255 / 14%) 49%, transparent 62%);
-    transform: translateX(-4%);
+        repeating-linear-gradient(87deg, transparent 0 4px, rgb(255 255 255 / 2%) 4px 5px),
+        linear-gradient(135deg, transparent 60%, rgb(0 0 0 / 12%));
 }
 
 .fynsera-3d-book__spine {
@@ -514,11 +505,11 @@ ul.tabs[role="tablist"] {
     left: calc(var(--book-depth) / -2);
     top: 3px;
     transform: rotateY(-90deg);
-    background: linear-gradient(90deg, #061f19, #125544 48%, #08271f);
+    background: linear-gradient(90deg, #08271f, #10483a 50%, #08271f);
     color: #e9dfc8;
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    gap: 1.2rem;
     padding: .5rem;
     writing-mode: vertical-rl;
     font-family: var(--font-reading);
@@ -529,7 +520,7 @@ ul.tabs[role="tablist"] {
 .fynsera-3d-book__pages {
     position: absolute;
     background-color: #eee3cd;
-    background-image: repeating-linear-gradient(0deg, transparent 0 2px, rgb(73 53 30 / 12%) 2px 3px);
+    background-image: repeating-linear-gradient(0deg, transparent 0 3px, rgb(73 53 30 / 7%) 3px 4px);
 }
 
 .fynsera-3d-book__pages--right {
@@ -545,7 +536,7 @@ ul.tabs[role="tablist"] {
     width: calc(var(--book-width) - 14px);
     height: calc(var(--book-depth) - 6px);
     left: 7px;
-    background-image: repeating-linear-gradient(90deg, transparent 0 2px, rgb(73 53 30 / 10%) 2px 3px);
+    background-image: repeating-linear-gradient(90deg, transparent 0 3px, rgb(73 53 30 / 6%) 3px 4px);
 }
 
 .fynsera-3d-book__pages--top {
@@ -560,60 +551,22 @@ ul.tabs[role="tablist"] {
 
 .fynsera-book-shadow {
     position: absolute;
-    width: 420px;
-    height: 95px;
-    bottom: 35px;
+    width: 380px;
+    height: 68px;
+    bottom: 38px;
     border-radius: 50%;
-    background: rgb(6 31 25 / 23%);
-    filter: blur(28px);
-    transform: rotate(-5deg);
+    background: rgb(6 31 25 / 17%);
+    filter: blur(32px);
+    transform: rotate(-3deg);
     z-index: -1;
-}
-
-.fynsera-book-orbit {
-    position: absolute;
-    display: flex;
-    gap: .45rem;
-    z-index: 3;
-    pointer-events: none;
-}
-
-.fynsera-book-orbit span {
-    padding: .45rem .7rem;
-    border: 1px solid color-mix(in oklch, var(--primary) 22%, var(--border));
-    border-radius: 999px;
-    background: color-mix(in oklch, var(--card) 84%, transparent);
-    box-shadow: 0 10px 35px color-mix(in oklch, var(--foreground) 9%, transparent);
-    backdrop-filter: blur(12px);
-    color: var(--muted-foreground);
-    font-family: var(--font-mono);
-    font-size: .57rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
-
-.fynsera-book-orbit--top {
-    top: 58px;
-    right: 12px;
-    animation: fynsera-float 5s ease-in-out infinite;
-}
-
-.fynsera-book-orbit--bottom {
-    bottom: 55px;
-    left: 0;
-    animation: fynsera-float 6s ease-in-out -2s infinite;
-}
-
-@keyframes fynsera-float {
-    50% { transform: translateY(-8px); }
 }
 
 @media (max-width: 640px) {
     .fynsera-book-scene {
         --book-width: 270px;
         --book-height: 405px;
-        --book-depth: 32px;
-        height: 510px;
+        --book-depth: 26px;
+        height: 490px;
     }
 
     .fynsera-3d-book__cover-content {
@@ -629,15 +582,11 @@ ul.tabs[role="tablist"] {
         height: 3.5rem;
     }
 
-    .fynsera-book-orbit--top { top: 15px; right: 0; }
-    .fynsera-book-orbit--bottom { bottom: 18px; left: 0; }
     .fynsera-book-shadow { width: 300px; bottom: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .fynsera-3d-book,
-    .fynsera-book-orbit {
+    .fynsera-3d-book {
         transition: none;
-        animation: none;
     }
 }

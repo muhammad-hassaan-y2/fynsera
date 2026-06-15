@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Link from '@docusaurus/Link';
-import { ArrowUpRight, BookOpen } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import FynseraLogo from '@/components/FynseraLogo';
 
 export default function GuideCover() {
@@ -27,16 +27,6 @@ export default function GuideCover() {
         '--book-tilt-y': `${tilt.y}deg`,
       } as React.CSSProperties}
     >
-      <div className="fynsera-book-orbit fynsera-book-orbit--top">
-        <span>Practical guide</span>
-        <span>Open source</span>
-      </div>
-      <div className="fynsera-book-orbit fynsera-book-orbit--bottom">
-        <span>Agents</span>
-        <span>Governance</span>
-        <span>Execution</span>
-      </div>
-
       <Link
         to="/docs/startup-guide"
         className="fynsera-3d-book group text-foreground hover:text-foreground hover:no-underline"
@@ -52,28 +42,20 @@ export default function GuideCover() {
         </div>
         <div className="fynsera-3d-book__cover">
           <div className="fynsera-3d-book__grain" />
-          <div className="fynsera-3d-book__shine" />
           <div className="fynsera-3d-book__cover-content">
-            <div className="flex items-start justify-between">
+            <div className="flex justify-center">
               <FynseraLogo className="fynsera-book-logo h-20 w-20" />
-              <span className="font-mono text-[9px] uppercase tracking-[.2em] text-[#d8ccb4]">
-                Field guide 01
-              </span>
             </div>
             <div className="mt-auto">
               <p className="font-mono text-[9px] uppercase tracking-[.22em] text-[#c8b894] mb-5">
-                Open-source practical guide
+                Fynsera field guide 01
               </p>
               <h2 className="font-reading text-[3.25rem] leading-[.9] tracking-[-.055em] font-semibold text-[#f7f0df]">
                 Build an
-                <span className="block text-[#d7c7a2]">AI-native</span>
-                <span className="block">company.</span>
+                <span className="block">AI-native company.</span>
               </h2>
               <div className="mt-8 pt-5 border-t border-[#f7f0df]/20 flex items-center justify-between text-[#e6d8b9]">
-                <span className="inline-flex items-center gap-2 font-mono text-[9px] uppercase tracking-[.14em]">
-                  <BookOpen className="w-4 h-4" />
-                  Fynsera
-                </span>
+                <span className="font-mono text-[9px] uppercase tracking-[.14em]">Practical guide</span>
                 <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
             </div>
