@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfynsera_docs=self.webpackChunkfynsera_docs||[]).push([[500],{9024(e){e.exports=JSON.parse('{"metadata":{"permalink":"/fynsera/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
