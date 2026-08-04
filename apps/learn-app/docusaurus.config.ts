@@ -52,8 +52,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "panaversity", // Usually your GitHub org/user name.
-  projectName: "ai-native-software-development", // Usually your repo name.
+  organizationName: "muhammad-hassaan-y2", // Usually your GitHub org/user name.
+  projectName: "fynsera", // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: "warn",
@@ -336,16 +336,15 @@ const config: Config = {
       hideOnScroll: false,
       items: [
         {
-          to: "/factory",
+          to: "/docs/fynsera-guide",
           position: "left",
-          label: "🏭 Factory",
-          className: "navbar-factory-link",
+          label: "Quick Guide",
         },
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Book",
+          label: "Fynsera Book",
         },
         {
           type: "custom-searchBar",
@@ -361,36 +360,36 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Learn",
+          title: "Documentation",
           items: [
             {
-              label: "Start Your Journey",
-              to: "/docs/thesis",
+              label: "Quick Guide",
+              to: "/docs/fynsera-guide",
             },
             {
-              label: "Full Curriculum",
-              to: "/docs/thesis",
+              label: "Getting Started",
+              to: "/docs/getting-started",
             },
             {
-              label: "Learning Path",
-              to: "/docs/thesis",
+              label: "Core Concepts",
+              to: "/docs/core-concepts",
             },
           ],
         },
         {
-          title: "Build",
+          title: "Agent Roster",
           items: [
             {
-              label: "Startup Guide",
-              to: "/docs/startup-guide",
+              label: "Office Agents",
+              to: "/docs/agents-office",
             },
             {
-              label: "Company Builder",
-              to: "/factory",
+              label: "Yard & Plant Agents",
+              to: "/docs/agents-yard-plant",
             },
             {
-              label: "Agentic Finance",
-              to: "/docs/AI-Tool-Landscape/claude-code-for-finance",
+              label: "Governance & Control",
+              to: "/docs/governance-control",
             },
           ],
         },
@@ -399,15 +398,15 @@ const config: Config = {
           items: [
             {
               label: "GitHub Repository",
-              href: "https://github.com/panaversity/ai-native-software-development",
+              href: "https://github.com/muhammad-hassaan-y2/fynsera",
             },
             {
-              label: "AI Native Specification",
-              href: "https://github.com/panaversity/ai-native-software-development/tree/main/specs",
+              label: "Implementation & Rollout",
+              to: "/docs/implementation-rollout",
             },
             {
-              label: "Factory Dashboard",
-              to: "/factory",
+              label: "Pricing & Plans",
+              to: "/docs/pricing-plans",
             },
           ],
         },
@@ -415,12 +414,12 @@ const config: Config = {
           title: "Fynsera",
           items: [
             {
-              label: "Our Thesis",
-              to: "/docs/thesis",
+              label: "Quick Guide",
+              to: "/docs/fynsera-guide",
             },
             {
-              label: "Company Builder",
-              to: "/factory",
+              label: "FAQs & Objections",
+              to: "/docs/faqs-objections",
             },
           ],
         },

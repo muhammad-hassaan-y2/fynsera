@@ -43,12 +43,12 @@ function HomepageHeader() {
             <div className="flex flex-col items-start gap-6">
               <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                 <Button asChild size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base font-bold rounded-xl bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/15">
-                  <Link to="/docs/startup-guide" className="flex items-center gap-3">
-                    Start building <ArrowRight className="w-5 h-5" />
+                  <Link to="/docs/fynsera-guide" className="flex items-center gap-3">
+                    Quick Guide <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-12 sm:h-14 px-6 sm:px-8 text-sm sm:text-base font-bold rounded-xl bg-background/60 backdrop-blur">
-                  <Link to="/factory">Open Company Builder</Link>
+                  <Link to="/docs/getting-started">Read Fynsera Book</Link>
                 </Button>
               </div>
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground font-mono">
