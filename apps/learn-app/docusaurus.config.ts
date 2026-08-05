@@ -263,6 +263,11 @@ const config: Config = {
         name: "custom-webpack-config",
         configureWebpack(config, isServer, utils) {
           const path = require("path");
+          if (config.plugins) {
+            config.plugins = config.plugins.filter(
+              (p: any) => p && p.constructor && p.constructor.name !== "WebPackBarPlugin" && p.constructor.name !== "ProgressPlugin"
+            );
+          }
           return {
             resolve: {
               alias: {
