@@ -327,12 +327,12 @@ const config: Config = {
     },
     navbar: {
       title: "Fynsera",
-      // logo: {
-      //   alt: 'Fynsera Logo',
-      //   src: 'img/book-cover.png',
-      //   width: 32,
-      //   height: 32,
-      // },
+      logo: {
+        alt: 'Fynsera Logo',
+        src: 'img/book-cover.png',
+        width: 32,
+        height: 32,
+      },
       hideOnScroll: false,
       items: [
         {

@@ -1,6 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-const sharp = require("sharp");
+let sharp;
+try {
+  sharp = require("sharp");
+} catch (e) {
+  // sharp is optional
+}
 
 // Satori is ESM-only, we'll use dynamic import
 let satori;

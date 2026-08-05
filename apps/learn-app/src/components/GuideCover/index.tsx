@@ -28,7 +28,7 @@ export default function GuideCover() {
       } as React.CSSProperties}
     >
       <Link
-        to="/docs/startup-guide"
+        to="/docs/fynsera-guide"
         className="fynsera-3d-book group text-foreground hover:text-foreground hover:no-underline"
         aria-label="Open the Fynsera guide"
       >

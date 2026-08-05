@@ -31,7 +31,12 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-const matter = require('gray-matter');
+let matter;
+try {
+  matter = require('gray-matter');
+} catch (e) {
+  matter = (str) => ({ data: {}, content: str });
+}
 
 /**
  * Extract title from frontmatter or derive from path segment
