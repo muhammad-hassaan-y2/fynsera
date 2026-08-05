@@ -44,8 +44,8 @@ const checkpoints: Checkpoint[] = [
       "Pilot specification with a measurable success metric",
       "Decision: pursue, revise, or stop",
     ],
-    helpingLessons: "Fynsera Startup Guide + The Fynsera Thesis",
-    lessonsLink: "/docs/startup-guide",
+    helpingLessons: "Fynsera Quick Guide + Construction AI Thesis",
+    lessonsLink: "/docs/fynsera-guide",
     successSignal: "A real customer agrees to test or pay for the first workflow.",
   },
   {

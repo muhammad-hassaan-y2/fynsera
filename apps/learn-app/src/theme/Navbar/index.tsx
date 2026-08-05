@@ -52,9 +52,10 @@ export default function Navbar() {
 
                     {isHomepage && (
                         <nav className="hidden lg:flex items-center gap-1 ml-8 mr-auto">
-                            <Button variant="ghost" asChild><Link to="/factory">Company Builder</Link></Button>
-                            <Button variant="ghost" asChild><Link to="/docs/startup-guide">Startup Guide</Link></Button>
-                            <Button variant="ghost" asChild><Link to="/docs/AI-Tool-Landscape/claude-code-for-finance">Agentic Finance</Link></Button>
+                            <Button variant="ghost" asChild><Link to="/docs/fynsera-guide">Quick Guide</Link></Button>
+                            <Button variant="ghost" asChild><Link to="/docs/getting-started">Fynsera Book</Link></Button>
+                            <Button variant="ghost" asChild><Link to="/docs/agents-office">Digital FTEs</Link></Button>
+                            <Button variant="ghost" asChild><Link to="/docs/implementation-rollout">Pilot Plan</Link></Button>
                         </nav>
                     )}
 
@@ -143,30 +144,30 @@ export default function Navbar() {
                                         // On non-doc pages, show generic navigation
                                         <nav className="flex flex-col gap-1 p-4">
                                             <Button variant="ghost" asChild className="justify-start h-12" onClick={() => setMobileMenuOpen(false)}>
-                                                <Link to="/docs/preface-agent-native">
+                                                <Link to="/docs/fynsera-guide">
                                                     <BookOpen className="w-5 h-5" />
-                                                    Read Guide
+                                                    Quick Guide
                                                 </Link>
                                             </Button>
                                             <Button variant="ghost" asChild className="justify-start h-12" onClick={() => setMobileMenuOpen(false)}>
-                                                <Link to="/docs/preface-agent-native">
+                                                <Link to="/docs/getting-started">
                                                     <Layers className="w-5 h-5" />
-                                                    Chapters
+                                                    Fynsera Book
                                                 </Link>
                                             </Button>
                                             <Button variant="ghost" asChild className="justify-start h-12" onClick={() => setMobileMenuOpen(false)}>
-                                                <Link to="/docs/preface-agent-native">
+                                                <Link to="/docs/agents-office">
                                                     <Lightbulb className="w-5 h-5" />
-                                                    Resources
+                                                    Digital FTEs
                                                 </Link>
                                             </Button>
 
                                             <div className="h-px bg-border my-2" />
 
                                             <Button variant="ghost" asChild className="justify-start h-12 text-muted-foreground">
-                                                <Link to="https://github.com/panaversity/ai-native-software-development">
+                                                <Link to="https://github.com/muhammad-hassaan-y2/fynsera">
                                                     <Github className="w-5 h-5" />
-                                                    Source Code
+                                                    GitHub Repository
                                                 </Link>
                                             </Button>
                                         </nav>

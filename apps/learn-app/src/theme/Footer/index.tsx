@@ -17,7 +17,9 @@ export default function Footer() {
                                 <FynseraLogo className="fynsera-logo h-10 w-10" />
                                 <h3 className="text-2xl font-extrabold tracking-tight">Fynsera</h3>
                             </div>
-                            <p className="text-muted-foreground max-w-md leading-relaxed">The operating system for founders building AI-native companies with agentic workflows, financial control, and repeatable execution.</p>
+                            <p className="text-muted-foreground max-w-md leading-relaxed">
+                                The AI Workforce Operating System for construction companies. Senses site progress, Primavera schedules, costs, and contracts under strict human governance.
+                            </p>
                         </div>
                     </div>
 
@@ -25,58 +27,58 @@ export default function Footer() {
                     <div className="hidden md:block md:col-span-1"></div>
 
                     {/* Links - Spans 6 columns */}
-                    <div className="md:col-span-6 grid grid-cols-2 gap-8 text-sm">
-                        {/* Column 1 */}
+                    <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+                        {/* Column 1: Guide & Docs */}
                         <div className="flex flex-col gap-2">
-                            <h4 className="font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2">Learn</h4>
+                            <h4 className="font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2">Documentation</h4>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="/docs/preface-agent-native">Open Guide</Link>
+                                <Link to="/docs/fynsera-guide">Quick Guide</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="/docs/preface-agent-native">Curriculum</Link>
+                                <Link to="/docs/getting-started">Getting Started</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="https://github.com/panaversity/ai-native-software-development/tree/main/specs">Specification</Link>
-                            </Button>
-                            <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="https://github.com/panaversity">Projects</Link>
+                                <Link to="/docs/core-concepts">Core Concepts</Link>
                             </Button>
                         </div>
 
-                        {/* Column 2 (Company) */}
+                        {/* Column 2: Digital FTEs */}
                         <div className="flex flex-col gap-2">
-                            <h4 className="font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2">Company</h4>
+                            <h4 className="font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2">Digital FTEs</h4>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="/docs/thesis">Our Thesis</Link>
+                                <Link to="/docs/agents-office">Office Agents</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="/factory">Company Builder</Link>
+                                <Link to="/docs/agents-yard-plant">Yard & Plant Agents</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="/docs/AI-Tool-Landscape/claude-code-for-finance">Agentic Finance</Link>
+                                <Link to="/docs/governance-control">Governance & Control</Link>
+                            </Button>
+                        </div>
+
+                        {/* Column 3: Governance & Pilot */}
+                        <div className="flex flex-col gap-2">
+                            <h4 className="font-bold text-muted-foreground uppercase tracking-widest text-sm mb-2">Governance & Pilot</h4>
+                            <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
+                                <Link to="/docs/implementation-rollout">60-Day Pilot Plan</Link>
                             </Button>
                             <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
-                                <Link to="/docs/AI-Native-Software-Development/introduction-to-ai-agents">Build Agents</Link>
+                                <Link to="/docs/pricing-plans">Pricing & Plans</Link>
+                            </Button>
+                            <Button variant="link" className="h-auto p-0 justify-start text-muted-foreground hover:text-foreground" asChild>
+                                <Link to="https://github.com/muhammad-hassaan-y2/fynsera">GitHub Repository</Link>
                             </Button>
                         </div>
                     </div>
-                </div>
-
-                {/* BIG TYPE Section */}
-                <div className="w-full py-10 border-y border-border/60 flex flex-col md:flex-row md:items-end justify-between gap-6">
-                    <p className="fynsera-gradient-text text-5xl md:text-7xl font-extrabold tracking-[-0.07em]">Build what operates.</p>
-                    <p className="fynsera-kicker">Agents / Finance / Execution</p>
                 </div>
 
                 {/* Bottom Section */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 text-sm text-muted-foreground">
-                    <div>
-                        &copy; {currentYear} Fynsera. Build AI-Native Companies.
+                <div className="border-t border-border/40 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground">
+                    <p>© {currentYear} Fynsera. All rights reserved.</p>
+                    <div className="flex items-center gap-6 mt-4 sm:mt-0 font-mono">
+                        <span>Construction AI Workforce OS</span>
+                        <span>Human-Governed Autonomy</span>
                     </div>
-
-                    <Button variant="outline" asChild>
-                        <Link to="/factory">Open Company Builder</Link>
-                    </Button>
                 </div>
             </div>
         </footer>
