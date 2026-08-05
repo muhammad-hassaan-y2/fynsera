@@ -231,6 +231,17 @@ const config: Config = {
     ],
   ],
   plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          {
+            from: ["/docs/startup-guide", "/docs/thesis", "/docs/preface-agent-native"],
+            to: "/docs/fynsera-guide",
+          },
+        ],
+      },
+    ],
     "../../libs/docusaurus/plugin-og-image",
     "../../libs/docusaurus/plugin-structured-data",
     // Summaries Plugin - Makes .summary.md content available via useGlobalData()
