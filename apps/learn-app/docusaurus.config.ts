@@ -28,7 +28,7 @@ const docsPath = hydrateEnabled ? "../build-source" : "docs";
 const config: Config = {
   title: "Fynsera",
   tagline:
-    "Build AI-Native Companies",
+    "The AI Workforce Operating System for Construction Companies",
   favicon: "favicon.png",
 
   // Custom fields accessible via useDocusaurusContext().siteConfig.customFields
@@ -290,11 +290,11 @@ const config: Config = {
 
     // Open Graph metadata for social media sharing
     metadata: [
-      { property: "og:title", content: "Fynsera | Build AI-Native Companies" },
+      { property: "og:title", content: "Fynsera | AI Workforce for Construction Companies" },
       {
         property: "og:description",
         content:
-          "The practical company-building system for agentic AI, finance, and startup execution.",
+          "Autonomous AI workforce OS built for construction. Senses site progress, Primavera schedules, costs, and contracts under human governance.",
       },
       { property: "og:type", content: "website" },
       {
@@ -305,11 +305,11 @@ const config: Config = {
       { property: "og:image:height", content: "630" },
       { property: "og:url", content: SITE_URL },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Fynsera | Build AI-Native Companies" },
+      { name: "twitter:title", content: "Fynsera | AI Workforce for Construction Companies" },
       {
         name: "twitter:description",
         content:
-          "The practical company-building system for agentic AI, finance, and startup execution.",
+          "Autonomous AI workforce OS built for construction. Senses site progress, Primavera schedules, costs, and contracts under human governance.",
       },
       {
         name: "twitter:image",
